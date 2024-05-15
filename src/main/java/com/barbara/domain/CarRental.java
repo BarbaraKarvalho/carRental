@@ -1,5 +1,6 @@
 package com.barbara.domain;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class CarRental {
@@ -49,6 +50,10 @@ public class CarRental {
 
     public void setInvoice(Invoice invoice) {
         this.invoice = invoice;
+    }
+
+    public Duration getDuration() {
+        return Duration.between(start, finish);
     }
 
     @Override
